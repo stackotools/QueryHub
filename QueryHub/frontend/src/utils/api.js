@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://queryhub-backend.onrender.com/api',
   timeout: 20000, // 20 seconds
   headers: {
     'Content-Type': 'application/json',
