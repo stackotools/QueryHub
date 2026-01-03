@@ -14,11 +14,14 @@ const answersRouter = require('./routes/answers');
 const app = express();
 
 // ============ MIDDLEWARE ============
-// Simple CORS - सभी allow करो
+// SIMPLE CORS - सभी allow करो
 app.use(cors({
   origin: '*',  // सभी websites allow
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
 app.use(express.json());
 
 // JWT Secret
