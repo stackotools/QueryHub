@@ -1,13 +1,12 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://queryhub-backend.onrender.com/api',
-  timeout: 20000, // 20 seconds
+  baseURL: 'https://queryhub-tzml.onrender.com/api',  // ✅ ये URL डालो
+  timeout: 20000,
   headers: {
     'Content-Type': 'application/json',
   },
 });
-
 // Request interceptor
 API.interceptors.request.use(
   (config) => {
