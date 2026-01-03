@@ -14,9 +14,12 @@ const answersRouter = require('./routes/answers');
 const app = express();
 
 // ============ MIDDLEWARE ============
+// CORS Middleware - ALL Origins allow करो
 app.use(cors({
-  origin: process.env.CLIENT_URL,
-  credentials: true
+  origin: '*',  // सभी websites allow
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
